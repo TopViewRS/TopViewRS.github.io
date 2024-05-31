@@ -172,6 +172,33 @@
   </div>
 </section>
 
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="subtitle has-text-centered">
+      </h2>
+      <img src="static/images/front_fig.png"> <!-- To .gif format-->
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">TL;DR</h2>
+        <div class="content has-text-justified">
+          <p><strong>1)</strong> We define the top-view spatial reasoning challenge for VLMs via 4 carefully designed tasks of increasing complexity, also encompassing 9 distinct fine-grained sub-tasks with a structured design of the questions focusing on different model abilities.</p>
+          <p><strong>2)</strong> We collect the <strong>TopViewRS</strong> dataset, comprising 11,384 multiple-choice questions with either photo-realistic or semantic top-view maps of real-world scenarios through a pipeline of automatic collection followed by human alignment.</p>
+          <p><strong>3)</strong> We use <strong>TopViewRS</strong> to evaluate and study 10 VLMs from different model families and sizes, highlighting the performance gap compared to human annotators.</p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -206,24 +233,60 @@
   </div>
 </section>
 
-<section class="hero teaser">
+<section class="section">
   <div class="container is-max-desktop">
-    <div class="hero-body">
-      <h2 class="subtitle has-text-centered">
-      </h2>
-      <img src="static/images/front_fig.png"> <!-- To .gif format-->
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Tasks and Sub-Tasks</h2>
+        <div class="content has-text-justified">
+          <p>We define 4 different tasks which cover a total of 9 finer-grained sub-tasks. The tasks are designed to have an increasing level of complexity, where each subsequent task depends on the abilities measured in the preceding one(s).</p>
+
+          <p><strong>(1) Top-View Recognition</strong> evaluates the fundamental ability to interpret the input map, and covers two sub-tasks: <i>Object Recognition</i> and <i>Scene Recognition</i>. It does not require the model to identify specific locations of objects and rooms.</p>
+          <img src="static/images/top-view-recognition.png">
+          <br><br>
+          <p><strong>(2) Top-View Localization</strong> investigates whether the model can localize objects or rooms in the top-view map based on textual descriptions, including <i>Object Localization</i> and <i>Scene Localization</i> as two sub-tasks. Beyond understanding the top-view map as a whole, it requires the model to ground entities in the map, representing the model's ability to align spatial descriptions with corresponding locations.</p>
+          <img src="static/images/top-view-localization.png">
+          <br><br>
+          <p><strong>(3) Static Spatial Reasoning</strong> aims to evaluate the model's spatial reasoning ability with more complex questions. It includes two sub-tasks: reasoning over <i>Scene Counting</i> and <i>Relative Spatial Relations</i> between different objects and rooms. These questions require the model to perform multi-step reasoning based on the recognition and localization of entities in the top-view map.</p>
+          <img src="static/images/static-spatial-reasoning.png">
+          <br><br>
+          <p><strong>(4) Dynamic Spatial Reasoning</strong> Finally, we introduce a novel task that involves dynamic spatial reasoning over top-view maps in the context of agent navigation. It requires the model to understand the sequential relations along the points of the navigation path (sub-task <i>Dynamic Action Counting</i>) and answer spatial questions with regard to the dynamic navigation path (sub-task <i>Dynamic Relative Spatial Reasoning</i>) and the circumstantial environments (<i>Dynamic Spatial Localization</i>).</p>
+          <img src="static/images/dynamic-spatial-reasoning.png">
+          <br><br>
+        </div>
+      </div>
     </div>
+    <!--/ Abstract. -->
   </div>
 </section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Experiment Results</h2>
+        <div class="content has-text-justified">
+          <img src="static/images/main_table.png"> <!-- To .gif format-->
+          <img src="static/images/main_visualization.png"> <!-- To .gif format-->
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
+    <pre><code>@article{XXXX,
+  <!-- author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
   title     = {Nerfies: Deformable Neural Radiance Fields},
   journal   = {ICCV},
-  year      = {2021},
+  year      = {2021}, -->
 }</code></pre>
   </div>
 </section>
@@ -231,15 +294,6 @@
 
 <footer class="footer">
   <div class="container">
-    <div class="content has-text-centered">
-      <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
