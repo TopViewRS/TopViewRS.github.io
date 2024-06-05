@@ -1,14 +1,16 @@
 # TopViewRS
 
-This is the repository that contains source code for the [TopViewRS](https://TopViewRS.github.io).
+This is the repository that contains source code for the website: [TopViewRS](https://TopViewRS.github.io).
 
 We build the website based on:
 ```
-@article{park2021nerfies
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+@misc{li2024topviewrs,
+    title={TopViewRS: Vision-Language Models as Top-View Spatial Reasoners},
+    author={Chengzu Li and Caiqi Zhang and Han Zhou and Nigel Collier and Anna Korhonen and Ivan Vulić},
+    year={2024},
+    eprint={2406.02537},
+    archivePrefix={arXiv},
+    primaryClass={cs.CL}
 }
 ```
 
