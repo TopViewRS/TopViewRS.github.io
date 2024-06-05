@@ -117,7 +117,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org"
+                <a href="https://arxiv.org/pdf/2406.02537"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -126,7 +126,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org"
+                <a href="https://arxiv.org/abs/2406.02537"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -164,7 +164,6 @@
                   <span>Data</span>
                   </a>
             </div>
-
           </div>
         </div>
       </div>
@@ -264,17 +263,48 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Experiment Results</h2>
         <div class="content has-text-justified">
           <img src="static/images/main_table.png"> <!-- To .gif format-->
           <img src="static/images/main_visualization.png"> <!-- To .gif format-->
+          <br><br>
+          <div class="key-findings">
+            <h3 class="title is-4">Key Findings:</h3>
+            <ul>
+              <li><strong> Models perform better on recognition and localization tasks compared to reasoning tasks.</strong> Top-View Recognition consistently demonstrates the highest performance across all models. Gemini shows human-comparable performance with over 90% EM score.</li>
+              <li><strong> Larger models do not always show better spatial awareness.</strong> Meanwhile, closed-source models outperform open-source models in easier tasks but the performance gap narrows as the task complexity increases.</li>
+              <li><strong> Models perform better in easier tasks with semantic maps, compared with realistic maps. </strong> However, for Top-View Localization and Static Spatial Reasoning, models struggle to utilize semantic top-view maps, yielding performances akin to random baselines in both EM and PM accuracy.</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Discussion</h2>
+        <div class="content has-text-justified">
+          <h3 class="title is-4">Gap to Human Performance</h3>
+          <div style="text-align: center; margin: 1em 0;">
+            <img src="static/images/human.png" style="width: 60%; height: auto;" text-align: center;>
+          </div>
+          <p>We evaluated human performance on a dataset of 60 top-view maps, with four participants achieving 90% accuracy across all the sub-task. This revealed a significant performance gap, with humans outperforming models by over 50% across all the sub-tasks that involve spatial awareness. </p>
+          
+          <h3 class="title is-4">Chain-of-Thought Helps Elicit Spatial Reasoning</h3>
+          <div style="text-align: center; margin: 1em 0;">
+            <img src="static/images/cot.png" style="width: 60%; height: auto;">
+          </div>
+
+          <p>We explore Chain-of-Thought (CoT) reasoning for our tasks, where we ask models first localize entities before answering. Experiments with GPT-4V and Gemini showed a performance increase of 6.50% on realistic maps and 5.14% on semantic maps, highlighting the effectiveness of step-by-step reasoning.</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -282,15 +312,17 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{XXXX,
-  <!-- author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021}, -->
-}</code></pre>
+    <pre><code>@misc{li2024topviewrs,
+        title={TopViewRS: Vision-Language Models as Top-View Spatial Reasoners},
+        author={Chengzu Li and Caiqi Zhang and Han Zhou and Nigel Collier and Anna Korhonen and Ivan Vulić},
+        year={2024},
+        eprint={2406.02537},
+        archivePrefix={arXiv},
+        primaryClass={cs.CL}
+    }
+</code></pre>
   </div>
 </section>
-
 
 <footer class="footer">
   <div class="container">
